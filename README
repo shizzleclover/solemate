@@ -1,0 +1,33 @@
+# Solemate
+
+Solemate is a concept ecommerce landing page focused on premium footwear. It is built as a static site with semantic HTML and modular CSS so it can be extended into a full storefront later on.
+
+## Features
+- Promotional announcement bar with dismiss button markup ready for future interactivity
+- Responsive hero section that highlights the core value proposition and metrics
+- Brand carousel strip showcasing partner logos
+- Reusable product grid for new arrivals and top-selling collections
+- Secondary showcase layout for curated drops
+
+## Project Structure
+- `index.html` &mdash; main landing page markup
+- `css/global.css` &mdash; typography tokens, layout primitives, shared components
+- `css/homepage.css` &mdash; homepage-specific sections and responsive tweaks
+- `assets/` &mdash; fonts, icons, and imagery referenced by the site
+- `script.js` &mdash; placeholder for future behavior (e.g., promo dismissal)
+
+## Getting Started
+1. Open `index.html` directly in your browser, or serve the project with any static file server:
+   - Python: `python -m http.server`
+   - Node: `npx serve`
+2. Update any missing imagery in `assets/images` to match the placeholders referenced in the markup.
+3. Customize copy, product details, and brand assets to align with your brand.
+
+## Responsiveness
+The layout adapts from a multi-column desktop view down to a single-column mobile experience. Key breakpoints are defined at 992px, 768px, and 600px for tablets and handheld devices.
+
+## Next Steps
+- Wire up `script.js` to add promo bar dismissal and other UI behaviors
+- Add additional pages (Shop, On Sale, New Arrivals, Brands) and link them to the navigation
+- Integrate a CMS or headless commerce backend to populate product data dynamically
+

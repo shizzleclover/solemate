@@ -139,24 +139,57 @@ button {
     color: var(--color-text-gray);
     position: relative;
     padding: 5px 0;
+    transition: color 0.3s ease;
 }
-.main-nav a:hover::after {
+
+.main-nav a:hover {
+    color: var(--color-black);
+}
+
+.main-nav a::after {
     content: '';
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%;
+    width: 0;
     height: 2px;
     background-color: var(--color-black);
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.main-nav a:hover::after {
+    width: 100%;
 }
 .search-bar {
     display: flex;
     align-items: center;
     background-color: var(--color-light-gray);
-    padding: 8px 10px;
+    padding: 10px 16px;
     border-radius: 50px;
     width: 500px;
+    gap: 10px;
+    transition: all 0.3s ease;
 }
+
+.search-bar:focus-within {
+    background-color: var(--color-white);
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.search-icon {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    color: var(--color-text-light);
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.search-bar:focus-within .search-icon {
+    opacity: 1;
+    color: var(--color-black);
+}
+
 .search-bar input {
     border: none;
     background: none;
@@ -164,36 +197,68 @@ button {
     width: 100%;
     font-size: 14px;
     font-family: var(--font-primary);
-    padding-left: 10px;
+    color: var(--color-text-gray);
 }
-.search-bar::before {
-    content: '';
-    display: block;
-    width: 20px;
-    height: 20px;
-    background-image: url('../images/icon-search.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+
+.search-bar input::placeholder {
+    color: var(--color-text-light);
+    opacity: 0.7;
 }
 .header-icons {
     display: flex;
-    gap: 20px;
+    gap: 24px;
+    align-items: center;
 }
+
 .icon-cart,
 .icon-user {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 24px;
     height: 24px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+    color: var(--color-text-gray);
+    transition: all 0.3s ease;
+    position: relative;
 }
-.icon-cart {
-    background-image: url('../images/icon-cart.svg');
+
+.icon-cart:hover,
+.icon-user:hover {
+    color: var(--color-black);
+    transform: scale(1.1);
 }
-.icon-user {
-    background-image: url('../images/icon-user.svg');
+
+.icon-cart svg,
+.icon-user svg {
+    width: 100%;
+    height: 100%;
+    stroke: currentColor;
+}
+
+/* Optional: Add a badge for cart items count */
+.icon-cart::after {
+    content: '';
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    width: 8px;
+    height: 8px;
+    background-color: var(--color-black);
+    border-radius: 50%;
+    opacity: 0;
+    /* Uncomment and add count when needed:
+    content: attr(data-count);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    border-radius: 50%;
+    font-size: 10px;
+    font-weight: 700;
+    */
 }
 
 .nav-toggle {
@@ -313,9 +378,15 @@ button {
 
     .header-icons {
         order: 1;
-        gap: 12px;
+        gap: 16px;
         margin-left: auto;
-        margin-right: 16px;
+        margin-right: 0;
+    }
+
+    .icon-cart,
+    .icon-user {
+        width: 22px;
+        height: 22px;
     }
 
     .main-nav {

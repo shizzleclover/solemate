@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Reset animation if it completes (fallback)
         track.addEventListener('animationiteration', function() {
-            // Animation will seamlessly loop due to duplicate content
+
         });
     });
 });

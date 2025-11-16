@@ -1,0 +1,654 @@
+/* Find Your Solemate - Tinder-style Interface */
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+    padding: 80px 0 60px;
+    text-align: center;
+    color: var(--color-white);
+}
+
+.hero-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-family: var(--font-display);
+    font-size: 56px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+.hero-subtitle {
+    font-size: 20px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* Finder Section */
+.finder-section {
+    padding: 60px 0 100px;
+    background: linear-gradient(to bottom, #F5F5F5 0%, #FFFFFF 100%);
+}
+
+.finder-layout {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* Preferences Panel */
+.preferences-panel {
+    background: var(--color-white);
+    border-radius: 20px;
+    padding: 32px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 20px;
+}
+
+.panel-title {
+    font-family: var(--font-display);
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 28px;
+    color: var(--color-black);
+}
+
+.preferences-form {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-black);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-select {
+    padding: 12px 16px;
+    border: 2px solid var(--color-light-gray);
+    border-radius: 12px;
+    font-family: var(--font-body);
+    font-size: 15px;
+    background: var(--color-white);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form-select:focus {
+    outline: none;
+    border-color: var(--color-black);
+}
+
+/* Radio Group */
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.radio-option:hover {
+    background-color: var(--color-hero-bg);
+}
+
+.radio-option input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: var(--color-black);
+}
+
+.radio-label {
+    font-size: 15px;
+    color: var(--color-text-gray);
+}
+
+/* Checkbox Group */
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.checkbox-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.checkbox-option:hover {
+    background-color: var(--color-hero-bg);
+}
+
+.checkbox-option input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: var(--color-black);
+}
+
+.checkbox-label {
+    font-size: 15px;
+    color: var(--color-text-gray);
+}
+
+/* Price Range */
+.price-range-selector {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.price-slider {
+    width: 100%;
+    height: 6px;
+    border-radius: 3px;
+    background: linear-gradient(to right, var(--color-black) 0%, var(--color-light-gray) 50%);
+    outline: none;
+    cursor: pointer;
+}
+
+.price-display {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: var(--color-text-gray);
+    font-weight: 500;
+}
+
+/* Color Picker */
+.color-picker {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.color-option {
+    cursor: pointer;
+    position: relative;
+}
+
+.color-option input[type="checkbox"] {
+    display: none;
+}
+
+.color-swatch {
+    display: block;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.color-option input[type="checkbox"]:checked + .color-swatch {
+    border-color: var(--color-black);
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.color-swatch:hover {
+    transform: scale(1.05);
+}
+
+/* Find Button */
+.btn-find {
+    margin-top: 12px;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Swipe Area */
+.swipe-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    padding: 20px;
+}
+
+.match-counter {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 28px;
+    background: var(--color-white);
+    border-radius: 50px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.counter-label {
+    font-size: 14px;
+    color: var(--color-text-gray);
+    font-weight: 500;
+}
+
+.counter-value {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-black);
+}
+
+/* Card Stack */
+.card-stack {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    height: 620px;
+    margin: 0 auto;
+}
+
+.shoe-card {
+    position: absolute;
+    width: 100%;
+    background: var(--color-white);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.shoe-card.active {
+    z-index: 3;
+    transform: scale(1) translateY(0);
+    opacity: 1;
+}
+
+.shoe-card.behind {
+    z-index: 2;
+    transform: scale(0.95) translateY(20px);
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.shoe-card.further-behind {
+    z-index: 1;
+    transform: scale(0.9) translateY(40px);
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+/* Hover effect for active card */
+.shoe-card.active:hover {
+    transform: scale(1.02) translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.16);
+}
+
+.card-image {
+    position: relative;
+    width: 100%;
+    height: 340px;
+    background: var(--color-hero-bg);
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.shoe-card.active:hover .card-image img {
+    transform: scale(1.05);
+}
+
+.card-badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: var(--color-black);
+    color: var(--color-white);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.card-info {
+    padding: 24px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.card-title {
+    font-family: var(--font-display);
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-black);
+    line-height: 1.3;
+    flex: 1;
+}
+
+.card-price {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-black);
+    margin-left: 16px;
+}
+
+.card-details {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+}
+
+.detail-tag {
+    padding: 6px 12px;
+    background: var(--color-hero-bg);
+    border-radius: 16px;
+    font-size: 13px;
+    color: var(--color-text-gray);
+    font-weight: 500;
+}
+
+.card-description {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--color-text-gray);
+    margin-bottom: 16px;
+}
+
+.card-rating {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.stars {
+    color: #FFD700;
+    font-size: 16px;
+}
+
+.rating-text {
+    font-size: 13px;
+    color: var(--color-text-gray);
+}
+
+/* Swipe Actions */
+.swipe-actions {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.action-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 20px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: var(--color-white);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.action-btn:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.action-btn:active {
+    transform: translateY(-2px) scale(1.02);
+}
+
+.pass-btn {
+    color: #FF4458;
+}
+
+.pass-btn:hover {
+    background: #FF4458;
+    color: var(--color-white);
+}
+
+.info-btn {
+    color: #4A90E2;
+    padding: 16px;
+}
+
+.info-btn:hover {
+    background: #4A90E2;
+    color: var(--color-white);
+}
+
+.like-btn {
+    color: #00C896;
+}
+
+.like-btn:hover {
+    background: #00C896;
+    color: var(--color-white);
+}
+
+.action-label {
+    position: absolute;
+    bottom: -28px;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* Swipe Hint */
+.swipe-hint {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.swipe-hint p {
+    font-size: 18px;
+    color: var(--color-text-gray);
+    margin-bottom: 4px;
+}
+
+.hint-subtext {
+    font-size: 14px !important;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+/* How It Works Section */
+.how-it-works {
+    padding: 80px 0;
+    background: var(--color-white);
+}
+
+.how-it-works .section-title {
+    text-align: center;
+    font-family: var(--font-display);
+    font-size: 40px;
+    font-weight: 900;
+    margin-bottom: 60px;
+    color: var(--color-black);
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 32px;
+}
+
+.step-card {
+    text-align: center;
+    padding: 32px 24px;
+    background: var(--color-hero-bg);
+    border-radius: 16px;
+    transition: all 0.3s ease;
+}
+
+.step-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+.step-icon {
+    width: 64px;
+    height: 64px;
+    background: var(--color-black);
+    color: var(--color-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0 auto 20px;
+}
+
+.step-title {
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--color-black);
+}
+
+.step-description {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--color-text-gray);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .finder-layout {
+        grid-template-columns: 280px 1fr;
+        gap: 24px;
+    }
+
+    .preferences-panel {
+        padding: 24px;
+    }
+
+    .hero-title {
+        font-size: 44px;
+    }
+}
+
+@media (max-width: 768px) {
+    .finder-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .preferences-panel {
+        position: static;
+    }
+
+    .hero-title {
+        font-size: 36px;
+    }
+
+    .hero-subtitle {
+        font-size: 18px;
+    }
+
+    .card-stack {
+        max-width: 100%;
+        height: 580px;
+    }
+
+    .card-image {
+        height: 300px;
+    }
+
+    .swipe-actions {
+        gap: 12px;
+    }
+
+    .action-btn {
+        padding: 16px;
+    }
+
+    .color-picker {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .color-swatch {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        padding: 60px 0 40px;
+    }
+
+    .hero-title {
+        font-size: 28px;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+    }
+
+    .finder-section {
+        padding: 40px 0 80px;
+    }
+
+    .card-stack {
+        height: 520px;
+    }
+
+    .card-image {
+        height: 260px;
+    }
+
+    .card-info {
+        padding: 20px;
+    }
+
+    .card-title {
+        font-size: 20px;
+    }
+
+    .card-price {
+        font-size: 20px;
+    }
+
+    .steps-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
+

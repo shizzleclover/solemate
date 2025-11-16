@@ -1,33 +1,268 @@
-# Solemate
+# SOLEMATE
 
-Solemate is a concept ecommerce landing page focused on premium footwear. It is built as a static site with semantic HTML and modular CSS so it can be extended into a full storefront later on.
+SOLEMATE (SM.CO) is a complete e-commerce website for premium footwear. The site features a modern, responsive design with a unique AI-powered shoe matching experience called "Find Your Solemate" - think Tinder for shoes! Built with semantic HTML and modular CSS, ready to be extended with backend functionality.
 
-## Features
-- Promotional announcement bar with dismiss button markup ready for future interactivity
-- Responsive hero section that highlights the core value proposition and metrics
-- Brand carousel strip showcasing partner logos
-- Reusable product grid for new arrivals and top-selling collections
-- Secondary showcase layout for curated drops
+## 🎯 Core Features
 
-## Project Structure
-- `index.html` &mdash; main landing page markup
-- `css/global.css` &mdash; typography tokens, layout primitives, shared components
-- `css/homepage.css` &mdash; homepage-specific sections and responsive tweaks
-- `assets/` &mdash; fonts, icons, and imagery referenced by the site
-- `script.js` &mdash; placeholder for future behavior (e.g., promo dismissal)
+### Homepage (`index.html`)
+- **Promotional Bar**: Eye-catching announcement bar with "FIND YOUR SOLEMATE" message
+- **Hero Section**: Bold value proposition with call-to-action and social proof metrics
+- **Brand Showcase**: Featured brand logos strip (Nike, Adidas, Puma, Versace, Gucci, Prada)
+- **Product Sections**:
+  - New Arrivals: Grid layout with product cards
+  - Top Selling: Featured products with ratings and pricing
+  - Latest Drops: Showcase layout for curated collections
+- **Browse by Style**: Masonry grid with hover effects (Casual, Formal, Party, Gym)
+- **Find Your Solemate Promo**: Interactive showcase with animated phone mockup
+- **Customer Testimonials**: Carousel-ready reviews section
+- **Newsletter Signup**: Email capture with engaging CTA
+- **Footer**: Comprehensive links with social media and payment icons
 
-## Getting Started
-1. Open `index.html` directly in your browser, or serve the project with any static file server:
-   - Python: `python -m http.server`
-   - Node: `npx serve`
-2. Update any missing imagery in `assets/images` to match the placeholders referenced in the markup.
-3. Customize copy, product details, and brand assets to align with your brand.
+### Find Your Solemate (`html/find-solemate.html`) 🔥
+Our signature feature - a Tinder-style shoe matching experience:
+- **Hero Section**: Feature introduction with compelling copy
+- **Preferences Panel**:
+  - Gender selection (Men, Women, Unisex)
+  - Shoe size selector
+  - Style preferences (Casual, Sporty, Formal, Streetwear, Luxury)
+  - Price range slider
+  - Color picker with swatches
+- **Swipe Interface**:
+  - Stacked card design with preview layers
+  - Detailed product cards with images, descriptions, and ratings
+  - Pass, Info, and Like action buttons
+  - Match counter showing available shoes
+- **How It Works**: 4-step visual guide explaining the matching process
 
-## Responsiveness
-The layout adapts from a multi-column desktop view down to a single-column mobile experience. Key breakpoints are defined at 992px, 768px, and 600px for tablets and handheld devices.
+### Shopping Pages
+- **Shop (`html/shop.html`)**: Main product catalog with advanced filtering
+- **On Sale (`html/on-sale.html`)**: Discounted items showcase
+- **New Arrivals (`html/new-arrivals.html`)**: Latest product releases
+- **Brands (`html/brands.html`)**: Brand directory with featured logos
 
-## Next Steps
-- Wire up `script.js` to add promo bar dismissal and other UI behaviors
-- Add additional pages (Shop, On Sale, New Arrivals, Brands) and link them to the navigation
-- Integrate a CMS or headless commerce backend to populate product data dynamically
+### Brand-Specific Pages
+Individual shopping pages for each premium brand:
+- **Nike** (`html/nike.html`)
+- **Adidas** (`html/adidas.html`)
+- **Puma** (`html/puma.html`)
+- **Versace** (`html/versace.html`)
+- **Gucci** (`html/gucci.html`)
+- **Prada** (`html/prada.html`)
 
+Each brand page features:
+- Pre-filtered product grid
+- Brand-specific collection title
+- Locked brand filter in sidebar
+- Full filtering capabilities (category, price, size)
+
+### Product Detail Page (`html/product.html`)
+- Product image gallery with thumbnail navigation
+- Product information (title, price, rating)
+- Color and size selectors with visual swatches
+- Quantity controls and Add to Cart button
+- Tabbed content section:
+  - Product Details (materials, fit, care)
+  - Rating & Reviews with customer testimonials
+  - FAQs accordion
+- "You Might Also Like" recommendations
+- Breadcrumb navigation
+
+### Shopping Cart (`html/cart.html`)
+- Cart items list with:
+  - Product images and details
+  - Size and color information
+  - Quantity controls
+  - Individual item removal
+- Order Summary with:
+  - Subtotal calculation
+  - Discount application
+  - Delivery fee
+  - Total amount
+  - Promo code input
+  - Checkout button
+
+### User Profile (`html/profile.html`)
+- Account management interface
+- Order history section
+- Wishlist/favorites
+- Profile settings
+
+## 📁 Project Structure
+
+```
+solemate/
+├── index.html              # Homepage
+├── script.js              # Future JavaScript functionality
+├── README                 # This file
+├── css/
+│   ├── global.css         # Base styles, typography, header, footer
+│   ├── homepage.css       # Homepage-specific styles
+│   ├── solemate-finder.css # Find Your Solemate feature styles
+│   ├── shop.css           # Product listing pages
+│   ├── product.css        # Product detail page
+│   ├── cart.css           # Shopping cart
+│   ├── brands.css         # Brands directory
+│   └── profile.css        # User profile page
+├── html/
+│   ├── find-solemate.html # Shoe matching feature
+│   ├── shop.html          # Main shop page
+│   ├── on-sale.html       # Sale items
+│   ├── new-arrivals.html  # New products
+│   ├── brands.html        # Brand directory
+│   ├── nike.html          # Nike collection
+│   ├── adidas.html        # Adidas collection
+│   ├── puma.html          # Puma collection
+│   ├── versace.html       # Versace collection
+│   ├── gucci.html         # Gucci collection
+│   ├── prada.html         # Prada collection
+│   ├── product.html       # Product details
+│   ├── cart.html          # Shopping cart
+│   └── profile.html       # User profile
+├── assets/
+│   └── images/
+│       └── shoes/         # Product images
+└── images/                # UI assets, icons, brand logos
+
+```
+
+## 🎨 Design Features
+
+### Visual Elements
+- **Modern Masonry Grid**: Browse by Style section with dynamic hover effects
+- **Gradient Backgrounds**: Strategic use of gradients for visual interest
+- **Smooth Animations**: 
+  - Floating animations on Find Your Solemate promo
+  - Hover effects on navigation and buttons
+  - Smooth transitions throughout
+- **Custom Icons**: SVG icons for search, cart, user profile, and features
+- **Typography**: Satoshi font family for modern, clean aesthetics
+
+### Interactive Components
+- **Card Stacking**: Tinder-style swipe interface preview
+- **Phone Mockup**: Animated device showcase with realistic rendering
+- **Floating Elements**: Background cards with independent animations
+- **Hover States**: Enhanced UX with visual feedback on all interactive elements
+
+### Responsive Design
+Fully responsive across all devices with breakpoints at:
+- **Desktop**: 1200px+ (full experience)
+- **Laptop**: 992px-1199px (optimized layouts)
+- **Tablet**: 768px-991px (adjusted grids)
+- **Mobile**: 480px-767px (single column)
+- **Small Mobile**: < 480px (compact design)
+
+## 🚀 Getting Started
+
+### Local Development
+1. **Open directly in browser**:
+   ```
+   Open index.html in any modern browser
+   ```
+
+2. **Or use a local server**:
+   ```bash
+   # Python
+   python -m http.server 8000
+   
+   # Node.js
+   npx serve
+   
+   # PHP
+   php -S localhost:8000
+   ```
+
+3. **Navigate the site**:
+   - Homepage: `index.html`
+   - Find Your Solemate: Click nav link or promo section
+   - Browse products: Shop, On Sale, or New Arrivals pages
+   - View brands: Browse brand directory and individual collections
+
+## 🔧 Customization
+
+### Brand Identity
+- Update `SM.CO` logo throughout
+- Replace shoe images in `assets/images/shoes/`
+- Customize colors in CSS variables (`:root` in `global.css`)
+
+### Content
+- Product information in HTML files
+- Testimonials in homepage
+- Brand logos in `images/` directory
+- Footer links and social media
+
+### Styling
+- Global styles: `css/global.css`
+- Page-specific: respective CSS files
+- Color scheme: CSS custom properties
+- Typography: Satoshi font family (imported via Google Fonts API)
+
+## 🎯 Key Features Highlights
+
+### 1. Find Your Solemate 🔥
+Our unique AI-powered matching algorithm (UI ready):
+- Personalized recommendations based on preferences
+- Swipeable card interface
+- Save favorites functionality
+- Instant matching experience
+
+### 2. Advanced Filtering
+- Category selection
+- Price range slider
+- Size filters
+- Brand checkboxes
+- Color preferences
+
+### 3. Complete E-commerce Flow
+- Product browsing
+- Detailed product pages
+- Shopping cart with calculations
+- User account management
+
+### 4. Premium Brand Focus
+- Curated luxury brands
+- Brand-specific collections
+- High-quality product presentations
+
+## 🌐 Browser Support
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+- Mobile browsers
+
+## 📱 Mobile-First Approach
+The site is built mobile-first with progressive enhancement for larger screens, ensuring optimal performance on all devices.
+
+## 🔜 Future Enhancements
+
+### JavaScript Functionality
+- Wire up Find Your Solemate swipe gestures
+- Shopping cart state management
+- Product image gallery functionality
+- Tab and accordion interactions
+- Form validation
+- Promo bar dismissal
+
+### Backend Integration
+- User authentication
+- Product database
+- Order processing
+- Payment gateway
+- Wishlist storage
+- Review system
+- AI matching algorithm implementation
+
+### Additional Features
+- Product filtering and sorting
+- Search functionality
+- Size guide modal
+- Wishlist/favorites
+- Product quick view
+- Related products algorithm
+
+## 📄 License
+This project is a portfolio/concept piece. Feel free to use as inspiration or learning material.
+
+---
+
+**Built with ❤️ for shoe lovers everywhere. Find your perfect SOLEMATE!**

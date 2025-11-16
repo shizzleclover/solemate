@@ -1194,12 +1194,10 @@
     display: block;
     width: 32px;
     height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     /* You can style the icons directly, or just use images */
-}
-.social-links img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
 }
 
 .footer-links h4 {

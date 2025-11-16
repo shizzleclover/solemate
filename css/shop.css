@@ -509,6 +509,7 @@
 .social-links {
     display: flex;
     gap: 15px;
+    /* outline: auto; */
 }
 
 .social-links a {
@@ -519,6 +520,7 @@
 
 .social-links img {
     width: 100%;
+    height: 100%;
 }
 
 .footer-links h4 {

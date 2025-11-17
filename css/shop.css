@@ -562,6 +562,12 @@
     gap: 10px;
 }
 
+.icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .payment-icons img {
     height: 28px;
 }

@@ -1024,6 +1024,8 @@
 .card-author img {
     width: 20px;
     height: 20px;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 .card-quote {
@@ -1192,10 +1194,10 @@
     display: block;
     width: 32px;
     height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     /* You can style the icons directly, or just use images */
-}
-.social-links img {
-    width: 100%;
 }
 
 .footer-links h4 {

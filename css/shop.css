@@ -509,16 +509,16 @@
 .social-links {
     display: flex;
     gap: 15px;
+    /* outline: auto; */
 }
 
 .social-links a {
     display: block;
     width: 32px;
     height: 32px;
-}
-
-.social-links img {
-    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .footer-links h4 {
@@ -562,8 +562,14 @@
     gap: 10px;
 }
 
+.icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .payment-icons img {
-    height: 24px;
+    height: 28px;
 }
 
 /* --- 7. RESPONSIVE STYLES --- */

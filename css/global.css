@@ -543,6 +543,15 @@ button {
     align-items: center;
 }
 
+.icon{
+    padding-inline: 8px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .payment-icons img {
     height: 28px;
     width: auto;
